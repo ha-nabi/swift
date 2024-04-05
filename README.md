@@ -1,7 +1,7 @@
 # iOS Code Convension
 Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가이드입니다.  
-이 가이드는 코드의 일관성을 유지하고, 팀원 간의 협업을 원활하게 하기 위해 만들어졌습니다.
 
+이 가이드는 코드의 일관성을 유지하고, 팀원 간의 협업을 원활하게 하기 위해 만들어졌습니다.
 
 <br>
 
@@ -15,6 +15,30 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
 - [Patterns](#patterns)
 - [File Organization](#file-organization)
 
+<br>
+
+## Team
+<a href="https://github.com/ha-nabi">
+ <img src="https://github.com/ha-nabi.png" alt="img" width="60"/>
+</a>
+
+<a href="https://github.com/kmh5038">
+ <img src="https://github.com/kmh5038.png" alt="img" width="60"/>
+</a>
+
+<a href="https://github.com/JooYoungNoh">
+ <img src="https://github.com/JooYoungNoh.png" alt="img" width="60"/>
+</a>
+
+<a href="https://github.com/Phangg">
+ <img src="https://github.com/Phangg.png" alt="img" width="60"/>
+</a>
+
+<a href="https://github.com/hamfan524">
+ <img src="https://github.com/hamfan524.png" alt="img" width="60"/>
+</a>
+
+<br>
 <br>
 
 ## **Indentation**
