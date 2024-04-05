@@ -47,7 +47,7 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     if exampleCode {
-        ...
+      // ...
     }
     ```
 
@@ -90,7 +90,7 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     @ViewBuilder
     private func ExampleComponent() -> some View {
-    		...
+      ...
     }
     ```
 
@@ -108,8 +108,8 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     enum Action {
-    		case showDialog
-    		...
+      case showDialog
+      ...
     }
     ```
 
@@ -119,7 +119,7 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     func fetchList() {
-    		...
+      ...
     }
     ```
 
@@ -155,16 +155,16 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     enum Direction {
-    	  case left
-    	  case right
+      case left
+      case right
     }
     
     func someDirection() -> Direction {
-    	  // WRONG
-    	  return Direction.left
+      // WRONG
+      return Direction.left
     
-    	  // RIGHT
-    	  return .left
+      // RIGHT
+      return .left
     }
     ```
 
@@ -175,30 +175,30 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     final class Listing {
       init(capacity: Int, allowsPets: Bool) {
-    	    // WRONG
-    	    self.capacity = capacity
-    	    self.isFamilyFriendly = !allowsPets // `self.` not required here
+      // WRONG
+      self.capacity = capacity
+      self.isFamilyFriendly = !allowsPets // `self.` not required here
     
-    	    // RIGHT
-    	    self.capacity = capacity
-    	    isFamilyFriendly = !allowsPets
+      // RIGHT
+      self.capacity = capacity
+      isFamilyFriendly = !allowsPets
       }
     
       private let isFamilyFriendly: Bool
       private var capacity: Int
     
       private func increaseCapacity(by amount: Int) {
-    	    // WRONG
-    	    self.capacity += amount
+      // WRONG
+      self.capacity += amount
     
-    	    // RIGHT
-    	    capacity += amount
+      // RIGHT
+      capacity += amount
     
-    	    // WRONG
-    	    self.save()
+      // WRONG
+      self.save()
     
-    	    // RIGHT
-    	    save()
+      // RIGHT
+      save()
       }
     }
     ```
@@ -230,11 +230,11 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     guard let xxxx = xxxx else { return }
     
     guard let xxxx = xxxx,
-    			xxxx.sdsda.isEmpty,
-    		  xxxx.ssss.isEmpty else { return }
+      xxxx.sdsda.isEmpty,
+      xxxx.ssss.isEmpty else { return }
     
     guard let xxxx = xxxx else { 
-    		throw abcdError.aaaaa
+      throw abcdError.aaaaa
     }
     ```
 
@@ -244,20 +244,20 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     func handle(_ action: SpaceshipAction) {
-    	  switch action {
+      switch action {
     	  
-    	  case .engageWarpDrive:
-    		    warpDrive.engage()
+      case .engageWarpDrive:
+      warpDrive.engage()
     	
-    	  case .enableArtificialGravity:
-    		    artificialGravityEngine.enable(strength: .oneG)
+      case .enableArtificialGravity:
+      artificialGravityEngine.enable(strength: .oneG)
     	
-    	  case .scanPlanet(let planet):
-    		    scanner.scan(planet)
+      case .scanPlanet(let planet):
+      scanner.scan(planet)
     	
-    	  case .handleIncomingEnergyBlast:
-    		    energyShields.engage()
-    	  }
+      case .handleIncomingEnergyBlast:
+      energyShields.engage()
+      }
     }
     ```
 
@@ -283,12 +283,12 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     // WRONG
     func doSomething() -> Void {
-    	  ...
+      ...
     }
     
     // RIGHT
     func doSomething() {
-    	  ...
+      ...
     }
     ```
 
@@ -308,32 +308,32 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
                            
     // RIGHT
     universe.generateStars(
-    	  at: location,
-    	  count: 5,
-    	  color: starColor,
-    	  withAverageDistance: 4
+      at: location,
+      count: 5,
+      color: starColor,
+      withAverageDistance: 4
     )
     ```
     
     ```swift
     // RIGHT
     func generateStars(
-    	  at location: Point,
-    	  count: Int,
-    	  color: StarColor,
-    	  withAverageDistance averageDistance: Float
+      at location: Point,
+      count: Int,
+      color: StarColor,
+      withAverageDistance averageDistance: Float
     ) async throws -> String {
-    	  populateUniverse()
+      populateUniverse()
     }
     
     // RIGHT
     func generateStars(
-    	  at location: Point,
-    	  count: Int,
-    	  color: StarColor,
-    	  withAverageDistance averageDistance: Float
+      at location: Point,
+      count: Int,
+      color: StarColor,
+      withAverageDistance averageDistance: Float
     ) {
-    	  populateUniverse()
+      populateUniverse()
     }
     ```
     
@@ -346,12 +346,12 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     // WRONG
     someAsyncThing() { argument1, argument2, argument3 in
-    	  print(argument3)
+      print(argument3)
     }
     
     // RIGHT
     someAsyncThing() { _, _, argument3 in
-    	  print(argument3)
+      print(argument3)
     }
     ```
 
@@ -386,7 +386,7 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     let destinationPlanet = solarSystem.hasPlanetsInHabitableZone ?
         solarSystem.planetsInHabitableZone.first :
-    	  solarSystem.uninhabitablePlanets.first
+        solarSystem.uninhabitablePlanets.first
     ```
 
     <br>
@@ -396,14 +396,14 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     // WRONG
     if selectImage != userSaveImage && userNickname != nickname && userManager.uid != "" {
-    		// ...
+      // ...
     }
     
     // RIGHT
     if selectImage != userSaveImage &&
-    	 userNickname != nickname && 
-    	 userManager.uid != "" {
-    		// ...
+       userNickname != nickname && 
+       userManager.uid != "" {
+      // ...
     }
     ```
     
@@ -416,18 +416,18 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     // WRONG
     switch trafficLight {
-    	case .greenLight:
-    	  // Move your vehicle
-    	default:
-    	  // Stop your vehicle
+      case .greenLight:
+      // Move your vehicle
+      default:
+      // Stop your vehicle
     }
     
     // RIGHT
     switch trafficLight {
-    	case .greenLight:
-    	  // Move your vehicle
-    	case .yellowLight, .redLight:
-    	  // Stop your vehicle
+      case .greenLight:
+      // Move your vehicle
+      case .yellowLight, .redLight:
+      // Stop your vehicle
     }
     ```
 
@@ -438,12 +438,12 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     // WRONG
     class SettingsRepository {
-    	  // ...
+      // ...
     }
     
     // RIGHT
     final class SettingsRepository {
-    	  // ...
+      // ...
     }
     ```
 
@@ -456,64 +456,64 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ["1", "2", "3"].compactMap { return Int($0) }
     
     var size: CGSize {
-    	  return CGSize(
-    	    width: 100.0,
-    	    height: 100.0)
+      return CGSize(
+      width: 100.0,
+      height: 100.0)
     }
     
     func makeInfoAlert(message: String) -> UIAlertController {
-    	  return UIAlertController(
-    	    title: "ℹ️ Info",
-    	    message: message,
-    	    preferredStyle: .alert)
+      return UIAlertController(
+      title: "ℹ️ Info",
+      message: message,
+      preferredStyle: .alert)
     }
     
     var alertTitle: String {
-    	  if issue.severity == .critical {
-    	    return "💥 Critical Error"
-    	  } else {
-    	    return "ℹ️ Info"
+      if issue.severity == .critical {
+        return "💥 Critical Error"
+      } else {
+        return "ℹ️ Info"
     }
     
     func type(of planet: Planet) -> PlanetType {
-    	  switch planet {
-    	  case .mercury, .venus, .earth, .mars:
-    	    return .terrestrial
-    	  case .jupiter, .saturn, .uranus, .neptune:
-    	    return .gasGiant
-    	  }
+      switch planet {
+      case .mercury, .venus, .earth, .mars:
+        return .terrestrial
+      case .jupiter, .saturn, .uranus, .neptune:
+        return .gasGiant
+      }
     }
     
     // RIGHT
     ["1", "2", "3"].compactMap { Int($0) }
     
     var size: CGSize {
-    	  CGSize(
-    	    width: 100.0,
-    	    height: 100.0)
+      CGSize(
+      width: 100.0,
+      height: 100.0)
     }
     
     func makeInfoAlert(message: String) -> UIAlertController {
-    	  UIAlertController(
-    	    title: "ℹ️ Info",
-    	    message: message,
-    	    preferredStyle: .alert)
+      UIAlertController(
+      title: "ℹ️ Info",
+      message: message,
+      preferredStyle: .alert)
     }
     
     var alertTitle: String {
-    	  if issue.severity == .critical {
-    	    "💥 Critical Error"
-    	  } else {
-    	    "ℹ️ Info"
+      if issue.severity == .critical {
+        "💥 Critical Error"
+      } else {
+        "ℹ️ Info"
     }
     
     func type(of planet: Planet) -> PlanetType {
-    	  switch planet {
-    	  case .mercury, .venus, .earth, .mars:
-    	    .terrestrial
-    	  case .jupiter, .saturn, .uranus, .neptune:
-    	    .gasGiant
-    	  }
+      switch planet {
+      case .mercury, .venus, .earth, .mars:
+        .terrestrial
+      case .jupiter, .saturn, .uranus, .neptune:
+        .gasGiant
+      }
     }
     ```
 
@@ -565,26 +565,26 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     struct xxx {
-    		@EnvironmentObject var ...
+      @EnvironmentObject var ...
     		
-    		@StateObject var ...
+      @StateObject var ...
     		
-    		@ObservedObject var ...
+      @ObservedObject var ...
     		
-    		@State var ...
+      @State var ...
     		
-    		@Binding var ...
+      @Binding var ...
     	
-    		@Presents var ppp: ... 
+      @Presents var ppp: ... 
     		
-    		private var ...
+      private var ...
     
-    		var aaa
-    		var bbb
-    		var ccc
+      var aaa
+      var bbb
+      var ccc
     		
-    		let ddd
-    		let eee
+      let ddd
+      let eee
     }
     ```
 
@@ -595,18 +595,18 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ```swift
     // WRONG
     var atmosphere: Atmosphere {
-    	  didSet {
-    	    print("oh my god, the atmosphere changed")
-    	  }
+      didSet {
+        print("oh my god, the atmosphere changed")
+      }
     }
     var gravity: CGFloat
     
     // RIGHT
     var gravity: CGFloat
     var atmosphere: Atmosphere {
-    	  didSet {
-    	    print("oh my god, the atmosphere changed")
-    	  }
+      didSet {
+        print("oh my god, the atmosphere changed")
+      }
     }
     ```
 
@@ -618,7 +618,7 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     ```swift
     enum Action {
-        ...
+      ...
     }
     
     @Dependency(\.dismiss) var dismiss
