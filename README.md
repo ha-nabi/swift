@@ -40,6 +40,8 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
 ## **Indentation**
 
 - 기본 4 whiteSpace 들여쓰기 사용
+
+  <details>
     
     ```swift
     if exampleCode {
@@ -47,11 +49,15 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+  </details>
+
 <br>
 
 ## Naming
 
 - **타입과 프로토콜의 이름에는 PascalCase를 사용하고, 그 외에는 lowerCamelCase를 사용하기**
+
+    <details>
     
     ```swift
     protocol SpaceThing {
@@ -79,9 +85,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     let myFleet = SpaceFleet()
     ```
 
+    </details>
+
     <br>
     
 - `@ViewBuilder` 메서드 경우 PascalCase 사용
+
+    <details>
     
     ```swift
     @ViewBuilder
@@ -90,17 +100,25 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - Bool 타입 변수 선언 시, `is` || `has` 로 시작 할 수 있도록 선언
+
+    <details>
     
     ```swift
     var isShowing: Bool = false
     ```
 
+    </details>
+
     <br>
     
 - 동작을 의미하는 변수 및 메서드 선언 시, 동사가 맨 앞으로 오도록 선언
+
+    <details>
     
     ```swift
     enum Action {
@@ -109,15 +127,21 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - API - `fetch, add, update, delete` 명칭 사용 ( not used - remove, get, create … )
+
+    <details>
     
     ```swift
     func fetchList() {
       ...
     }
     ```
+
+    </details>
 
     <br>
     
@@ -128,7 +152,9 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
 ## Style
 
 - **식별자 바로 뒤에 콜론(:)을 놓고 그 뒤에 공백을 두기**
-    
+
+    <details>
+
     ```swift
     var something: String = "코드 컨벤션 만들기"
     
@@ -137,9 +163,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - **쉽게 추론할 수 있는 유형은 타입 표기 생략하기 ( 객체 생성 )**
+
+    <details>
     
     ```swift
     // WRONG
@@ -164,9 +194,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - `self.` - 네이밍이 겹치지 않는 이상 사용하지 않기
+
+    <details>
     
     ```swift
     final class Listing {
@@ -199,9 +233,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - 여러 줄이 있는 배열은 각 괄호가 별도의 줄에 있도록 하기 ( 배열 속성 2개 이상의 경우 )
+
+    <details>
     
     ```swift
     // WRONG
@@ -217,10 +255,14 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ]
     ```
 
+    </details>
+
     <br>
     
 - guard let 구문 - else 문 클로저가 return 이 아닐 경우, 클로저 줄 내려서 사용 
 ( 조건 여러개는 당연히 조건에만 여러 줄 사용 )
+
+    <details>
     
     ```swift
     guard let xxxx = xxxx else { return }
@@ -234,9 +276,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - switch case 문은 각 case 별로 한줄씩 띄어서 사용
+
+    <details>
     
     ```swift
     func handle(_ action: SpaceshipAction) {
@@ -257,9 +303,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
-- 주석
+- 한줄 주석과 여러줄 주석을 구분하기
+
+    <details>
     
     ```swift
     한줄 주석
@@ -269,12 +319,16 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     ///
     ```
 
+    </details>
+
     <br>
     
 
 ### Functions
 
 - **함수 정의에서 Void 리턴 타입을 생략하기**
+
+    <details>
     
     ```swift
     // WRONG
@@ -288,9 +342,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - **긴 함수의 호출 ( 파라미터 2개 이상 )**
+
+    <details>
     
     ```swift
     // WRONG
@@ -332,12 +390,16 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
       populateUniverse()
     }
     ```
+
+    </details>
     
     <br>
 
 ### **Closures**
 
 - **사용하지 않는 클로저 파라미터의 이름은 밑줄(`_`)로 표시하기**
+
+    <details>
     
     ```swift
     // WRONG
@@ -351,11 +413,15 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 ### **Operators**
 
 - **중위 연산자는 양쪽에 공백이 하나씩 두기 및** 다양한 공백 너비보다는 괄호를 사용하여 연산자가 많은 문을 시각적으로 그룹화하기
+
+    <details>
     
     ```swift
     // WRONG
@@ -373,9 +439,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     let latitude = region.center.latitude - (region.span.latitudeDelta / 2.0)
     ```
 
+    </details>
+    
     <br>
     
 - 삼항 연산자의 표현이 너무 길어지면, 줄 내려서 사용하기
+
+    <details>
     
     ```swift
     let xx = ab ? a : b
@@ -385,9 +455,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
         solarSystem.uninhabitablePlanets.first
     ```
 
+    </details>
+    
     <br>
     
 - 조건이 여러 개의 경우, 각 조건이 별도의 줄에 있도록 하기 ( 조건 2개 이상의 경우 )
+
+    <details>
     
     ```swift
     // WRONG
@@ -402,12 +476,16 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
       // ...
     }
     ```
+
+    </details>
     
     <br>
 
 ## Patterns
 
 - **열거형에서 `switch`를 사용할 때 `default` case를 사용하지 말기**
+
+    <details>
     
     ```swift
     // WRONG
@@ -427,9 +505,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 - **기본 클래스는 `final`**
+
+    <details>
     
     ```swift
     // WRONG
@@ -443,9 +525,13 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+    
     <br>
     
 - **한줄일 경우엔`return` 생략**
+
+    <details>
     
     ```swift
     // WRONG
@@ -513,12 +599,16 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
 
 ## **File Organization**
 
 - **서로 다른 종류의 프로퍼티 선언 사이에 빈 줄을 추가하기**
+
+    <details>
     
     ```swift
     // WRONG
@@ -533,6 +623,8 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     var gravity: CGFloat
     ```
 
+    </details>
+
     <br>
     
 - import 문 관리
@@ -540,6 +632,8 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     내부 / 외부 한 줄 띄고 관리 ( 외부를 상단에, 내부를 하단에, test 최하단 )
     
     a-z 알파벳 순으로
+
+    <details>
     
     ```swift
     import Constellation
@@ -551,6 +645,8 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     @testable import Epoxy
     ```
 
+    </details>
+    
     <br>
     
 - 프로퍼티 순서
@@ -558,6 +654,10 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     - `propertyWrapper` 가 붇는 프로퍼티를 최상단에 선언
     - EnvironmentObject, StateObject, ObservedObject, State, Binding, private 순으로 선언
     - var / let 의 경우, var 를 상단에 let 을 하단에 선언
+
+    <br>
+    
+    <details>
     
     ```swift
     struct xxx {
@@ -584,9 +684,15 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+
     <br>
     
     - 연산 프로퍼티는 프로퍼티 중 맨 밑에 선언
+
+    <br>
+
+    <details>
     
     ```swift
     // WRONG
@@ -606,12 +712,18 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     }
     ```
 
+    </details>
+    
     <br>
     
 - In TCA
     - @Dependency 위치는 Action 과 body 사이에 사용
     - @Dependency 도 알파벳 순으로 선언
-    
+
+    <br>
+
+    <details>
+      
     ```swift
     enum Action {
       ...
@@ -622,6 +734,8 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
     
     var body: some ReducerOf<Self> {
     ```
+
+    </details>
 
     <br>
     
