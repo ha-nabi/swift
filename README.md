@@ -17,25 +17,21 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
 
 <br>
 
-## Team
-<a href="https://github.com/ha-nabi">
- <img src="https://github.com/ha-nabi.png" alt="img" width="60"/>
-</a>
-
+## Contributors
 <a href="https://github.com/kmh5038">
- <img src="https://github.com/kmh5038.png" alt="img" width="60"/>
+ <img src="https://github.com/kmh5038.png" alt="img" width="50"/>
 </a>
 
 <a href="https://github.com/JooYoungNoh">
- <img src="https://github.com/JooYoungNoh.png" alt="img" width="60"/>
+ <img src="https://github.com/JooYoungNoh.png" alt="img" width="50"/>
 </a>
 
 <a href="https://github.com/Phangg">
- <img src="https://github.com/Phangg.png" alt="img" width="60"/>
+ <img src="https://github.com/Phangg.png" alt="img" width="50"/>
 </a>
 
 <a href="https://github.com/hamfan524">
- <img src="https://github.com/hamfan524.png" alt="img" width="60"/>
+ <img src="https://github.com/hamfan524.png" alt="img" width="50"/>
 </a>
 
 <br>
