@@ -85,7 +85,7 @@ Swift 개발에 있어 범용적으로 사용할 수 있는 코드 컨벤션 가
 
     <br>
     
-- `@ViewBuilder` 메서드 경우, 현 프로젝트 내에서는 PascalCase 사용
+- `@ViewBuilder` 메서드 경우 PascalCase 사용
     
     ```swift
     @ViewBuilder
