@@ -4,11 +4,9 @@ import PackagePlugin
 import XcodeProjectPlugin
 #endif
 
-/// A Swift Package Manager `CommandPlugin` and `XcodeCommandPlugin` that executes
-/// `SwiftFormatTool` to format source code in Swift package targets according
-/// Swift Style Guide.
 @main
 struct SwiftFormatPlugin {
+
   func performCommand(
     context: CommandContext,
     inputPaths: [String],

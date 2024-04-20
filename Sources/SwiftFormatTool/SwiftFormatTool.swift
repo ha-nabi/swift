@@ -1,15 +1,12 @@
 import ArgumentParser
 import Foundation
 
-// MARK: - AirbnbSwiftFormatTool
-
 /// A command line tool that formats the given directories using SwiftFormat and SwiftLint,
 /// based on the Airbnb Swift Style Guide
 @main
-struct AirbnbSwiftFormatTool: ParsableCommand {
+struct SwiftFormatTool: ParsableCommand {
 
   // MARK: Internal
-
   @Argument(help: "The directories to format")
   var directories: [String]
 
@@ -30,13 +27,7 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
 
   @Flag(help: "When true, logs the commands that are executed")
   var log = false
-
-  @Option(help: "The absolute path to the SwiftFormat config file")
-  var swiftFormatConfig = Bundle.module.path(forResource: "airbnb", ofType: "swiftformat")!
-
-  @Option(help: "The absolute path to the SwiftLint config file")
-  var swiftLintConfig = Bundle.module.path(forResource: "swiftlint", ofType: "yml")!
-
+    
   @Option(help: "The project's minimum Swift version")
   var swiftVersion: String?
 
@@ -145,7 +136,7 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
 
   private func log(_ string: String) {
     // swiftlint:disable:next no_direct_standard_out_logs
-    print("[AirbnbSwiftFormatTool]", string)
+    print("[SwiftFormatTool]", string)
   }
 
 }

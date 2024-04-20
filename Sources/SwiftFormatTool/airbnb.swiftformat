@@ -2,7 +2,7 @@
 --exclude Carthage,Pods,.build
 
 # options
---swiftversion 5.9.0
+--swiftversion 5.6.0
 --self remove # redundantSelf
 --importgrouping testable-bottom # sortedImports
 --commas always # trailingCommas
